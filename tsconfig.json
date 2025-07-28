@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowJs": false,
+    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
+    "exactOptionalPropertyTypes": true,
+    "downlevelIteration": true,
+    "noUncheckedIndexedAccess": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@entities/*": ["src/entities/*"],
+      "@features/*": ["src/features/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@models/*": ["./src/shared/models/*"]
+    },
+    "types": ["node"]
+  },
+  "include": ["**/*.ts", "**/*.tsx", "src/app/index.tsx"],
+  "exclude": ["node_modules"]
+}
