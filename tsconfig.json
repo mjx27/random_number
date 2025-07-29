@@ -28,11 +28,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@entities/*": ["src/entities/*"],
-      "@features/*": ["src/features/*"],
-      "@widgets/*": ["src/widgets/*"],
-      "@shared/*": ["./src/shared/*"],
-      "@models/*": ["./src/shared/models/*"]
+      "@/app/*": ["src/app/*"],
+      "@/entities/*": ["src/entities/*"],
+      "@/features/*": ["src/features/*"],
+      "@/widgets/*": ["src/widgets/*"],
+      "@/shared/*": ["src/shared/*"]
     },
     "types": ["node"]
   },

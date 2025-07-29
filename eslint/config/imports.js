@@ -10,7 +10,6 @@ export default {
         alwaysTryTypes: true,
       },
     },
-    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
   },
   rules: {
     'import/order': [
@@ -40,7 +39,12 @@ export default {
     'import/extensions': [
       'error',
       'ignorePackages',
-      { ts: 'never', tsx: 'never', js: 'never' },
+      {
+        js: 'off',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
     ],
     'import/no-duplicates': 'error',
   },

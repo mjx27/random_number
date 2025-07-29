@@ -17,10 +17,12 @@ const dynamicGlobalStyles = (theme: ITheme) => css`
 
   #root {
     height: 100dvh;
+    width: 100dvw;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 50px 1fr;
     gap: ${theme.gaps.gapMedium};
+    background-color: ${theme.colorMain};
   }
 
   header {
