@@ -1,1 +1,1 @@
-export { StyledDiv } from './ui/createLayout';
+export { Layout } from './ui/Layout';

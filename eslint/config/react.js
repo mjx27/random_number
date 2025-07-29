@@ -1,10 +1,10 @@
 import pluginReact from 'eslint-plugin-react';
-import tseslint from 'typescript-eslint'; // Добавляем импорт
+import tseslint from 'typescript-eslint';
 
 export default {
   plugins: {
     react: pluginReact,
-    '@typescript-eslint': tseslint.plugin, // Добавляем плагин
+    '@typescript-eslint': tseslint.plugin,
   },
   settings: {
     react: {
@@ -16,14 +16,9 @@ export default {
     },
   },
   rules: {
-    // React правила
     'react/jsx-uses-react': 'error',
     'react/react-in-jsx-scope': 'off',
-
-    // Общие правила (лучше перенести в base.js)
-    'no-unused-vars': 'off', // Отключаем в пользу TS-версии
-
-    // TypeScript правила (лучше перенести в typescript.js)
+    'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
       {

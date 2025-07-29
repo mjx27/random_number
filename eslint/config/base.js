@@ -18,6 +18,6 @@ export default {
     },
   },
   rules: {
-    'no-unused-vars': 'off', // Отключаем в пользу @typescript-eslint/no-unused-vars
+    'no-unused-vars': 'off',
   },
 };
