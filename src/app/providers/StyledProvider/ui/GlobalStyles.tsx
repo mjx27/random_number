@@ -18,15 +18,18 @@ const dynamicGlobalStyles = (theme: ITheme) => css`
   #root {
     height: 100dvh;
     width: 100dvw;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 50px 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: ${theme.gaps.gapMedium};
     background-color: ${theme.colorMain};
   }
 
   header {
-    height: 50px;
+    padding: ${theme.paddings.paddingLittle2};
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   main {
