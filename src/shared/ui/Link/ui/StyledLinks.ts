@@ -19,19 +19,19 @@ const linkStyle = (theme: ITheme) => css`
 export const StyledLinkDark = styled(Link)(
   (props) => linkStyle(props.theme),
   (props) => ({
-    color: `${props.theme.colorTextAdd3}`,
+    color: `${props.theme.colorTextAdd1}`,
   })
 );
 
 export const StyledLinkLight = styled(Link)(
   (props) => linkStyle(props.theme),
   (props) => ({
-    color: props.theme.colorTextAdd1,
+    color: props.theme.colorTextAdd2,
   })
 );
 
 export const StyledLinkActive = styled(Link)((props) => ({
-  color: props.theme.colorAdd1,
+  color: props.theme.colorTextAdd3,
   letterSpacing: '1px',
-  borderBottom: `2px solid ${props.theme.colorAdd1}`,
+  borderBottom: `2px solid ${props.theme.colorTextAdd3}`,
 }));

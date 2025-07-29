@@ -1,3 +1,4 @@
-export { Link } from './ui/Link';
-export type { ILink } from './model/interfaces';
-export { CLinkStylesNames } from './lib/constants/index';
+import { CLinkStylesNames } from './lib/constants/index';
+import { Link } from './ui/Link';
+
+export { Link, CLinkStylesNames };

@@ -1,8 +1,8 @@
 import type { ComponentType } from 'react';
+import type { LinkProps } from 'react-router-dom';
 
-import { createIdentityObject } from '@shared/utils/createIdentityObject';
+import { createIdentityObject } from '@/shared/utils/createIdentityObject';
 
-import type { ILinkProps } from '../../model/interfaces';
 import type { TLinkStyle } from '../../model/types';
 import {
   StyledLinkActive,
@@ -16,7 +16,7 @@ export const CLinkStylesNames = createIdentityObject({
   ACTIVE: 'ACTIVE',
 } as const);
 
-export const CLinkStyles: Record<TLinkStyle, ComponentType<ILinkProps>> = {
+export const CLinkStyles: Record<TLinkStyle, ComponentType<LinkProps>> = {
   [CLinkStylesNames.DARK]: StyledLinkDark,
   [CLinkStylesNames.LIGHT]: StyledLinkLight,
   [CLinkStylesNames.ACTIVE]: StyledLinkActive,

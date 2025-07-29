@@ -8,6 +8,7 @@ export default {
     '**/*.d.ts',
     '**/coverage/',
     '**/*.config.ts',
+    '**/webpack/**',
   ],
   ...eslint.configs.recommended,
   languageOptions: {
