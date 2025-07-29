@@ -3,10 +3,8 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import { Header } from '@/widgets/Header';
 
-import { MainPage } from './pages/Main';
-import { ResultPage } from './pages/Results';
 import { AppProvider } from './providers/AppProvider';
-
+import { CRoutes } from './routes';
 
 export const App = (): JSX.Element => {
   return (
@@ -14,8 +12,9 @@ export const App = (): JSX.Element => {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/" element={<ResultPage />} />
+          {CRoutes.map(({ path, element }) => (
+            <Route key={path} path={path} element={element} />
+          ))}
         </Routes>
       </Router>
     </AppProvider>
