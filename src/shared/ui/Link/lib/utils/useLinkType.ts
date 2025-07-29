@@ -9,7 +9,7 @@ export const useLinkType = ({ to, type }: ILink): TLinkStyle => {
   const { pathname } = useLocation();
 
   return useMemo(
-    () => (pathname === to ? CLinkStylesNames.active : type),
+    () => (pathname === to ? CLinkStylesNames.ACTIVE : type),
     [pathname, to, type]
   );
 };

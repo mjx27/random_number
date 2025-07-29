@@ -27,6 +27,7 @@ export default {
         varsIgnorePattern: '^_',
         caughtErrorsIgnorePattern: '^_',
         destructuredArrayIgnorePattern: '^_',
+        ignoreImports: false,
       },
     ],
     '@typescript-eslint/consistent-type-imports': 'error',

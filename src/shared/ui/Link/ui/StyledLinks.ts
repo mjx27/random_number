@@ -1,4 +1,3 @@
-'use client';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';

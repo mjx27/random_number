@@ -1,6 +1,9 @@
+import type { ComponentType } from 'react';
+
 import { createIdentityObject } from '@shared/utils/createIdentityObject';
 
-import type { TLinkComponentsMap } from '../../model/types';
+import type { ILinkProps } from '../../model/interfaces';
+import type { TLinkStyle } from '../../model/types';
 import {
   StyledLinkActive,
   StyledLinkDark,
@@ -8,13 +11,13 @@ import {
 } from '../../ui/StyledLinks';
 
 export const CLinkStylesNames = createIdentityObject({
-  dark: 'dark',
-  light: 'light',
-  active: 'active',
+  DARK: 'DARK',
+  LIGHT: 'LIGHT',
+  ACTIVE: 'ACTIVE',
 } as const);
 
-export const CLinkStyles: TLinkComponentsMap = {
-  dark: StyledLinkDark,
-  light: StyledLinkLight,
-  active: StyledLinkActive,
+export const CLinkStyles: Record<TLinkStyle, ComponentType<ILinkProps>> = {
+  [CLinkStylesNames.DARK]: StyledLinkDark,
+  [CLinkStylesNames.LIGHT]: StyledLinkLight,
+  [CLinkStylesNames.ACTIVE]: StyledLinkActive,
 } as const;

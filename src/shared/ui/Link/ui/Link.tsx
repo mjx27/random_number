@@ -1,4 +1,3 @@
-'use client';
 import type { JSX } from 'react';
 
 import { CLinkStyles } from '../lib/constants';

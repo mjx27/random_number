@@ -1,6 +1,4 @@
-'use client';
-import type { JSX } from 'react';
-import { type FC, type PropsWithChildren } from 'react';
+import type { JSX, FC, PropsWithChildren } from 'react';
 
 import { StyleProvider } from './StyledProvider';
 

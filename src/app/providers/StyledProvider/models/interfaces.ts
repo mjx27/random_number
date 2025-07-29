@@ -3,7 +3,7 @@ import {
   type TPadding,
   type TBorderRadius,
   type TTransition,
-} from '@shared/models/types/TStyles';
+} from '@/shared/models/types/TStyles';
 
 interface IGaps {
   gapLittle: TGap;

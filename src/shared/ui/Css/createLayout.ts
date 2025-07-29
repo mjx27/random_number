@@ -1,8 +1,9 @@
 import { css } from '@emotion/react';
 
-import type { TDisplayProps } from '@/shared/models/types/TStyles';
+import type { TLayoutProps } from '@/shared/models/types/TStyles';
 
-export const createDisplay = (props: TDisplayProps) => css`
+export const createLayout = (props: TLayoutProps) => css`
+  padding: ${props.padding};
   display: ${props.display};
   flex-direction: ${props.flexDirection};
   place-items: ${props.alignItems} ${props.justifyItems};

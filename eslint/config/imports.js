@@ -10,6 +10,7 @@ export default {
         alwaysTryTypes: true,
       },
     },
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
   },
   rules: {
     'import/order': [
@@ -25,11 +26,11 @@ export default {
         ],
         pathGroups: [
           { pattern: '@/**', group: 'internal' },
-          { pattern: '@entities/**', group: 'internal' },
-          { pattern: '@features/**', group: 'internal' },
-          { pattern: '@widgets/**', group: 'internal' },
-          { pattern: '@shared/**', group: 'internal' },
-          { pattern: '@models/**', group: 'internal' },
+          { pattern: '@/entities/**', group: 'internal' },
+          { pattern: '@/features/**', group: 'internal' },
+          { pattern: '@/widgets/**', group: 'internal' },
+          { pattern: '@/shared/**', group: 'internal' },
+          { pattern: '@/models/**', group: 'internal' },
         ],
         'newlines-between': 'always',
         alphabetize: { order: 'asc', caseInsensitive: true },
@@ -39,7 +40,8 @@ export default {
     'import/extensions': [
       'error',
       'ignorePackages',
-      { ts: 'never', tsx: 'never' },
+      { ts: 'never', tsx: 'never', js: 'never' },
     ],
+    'import/no-duplicates': 'error',
   },
 };

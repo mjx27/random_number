@@ -14,6 +14,10 @@ export default {
     globals: {
       ...globals.browser,
       ...globals.node,
+      ...globals.es2021,
     },
+  },
+  rules: {
+    'no-unused-vars': 'off', // Отключаем в пользу @typescript-eslint/no-unused-vars
   },
 };

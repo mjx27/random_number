@@ -21,14 +21,14 @@ export const constTheme: ITheme = {
     transitionDefaultSlow: 'all .3s linear',
     transitionDefaultFast: 'all .15s linear',
   },
-  colorMain: '#fff',
-  colorTextMain: '#000',
-  colorTextAdd1: '#808080',
-  colorTextAdd2: '#dddddd',
-  colorTextAdd3: '#4f4f4f',
-  colorAdd2: '#123c69',
-  colorAdd1: '#ac3b61',
-  colorAdd3: '#ec2850',
+  colorMain: ' #191919',
+  colorTextMain: ' #ffffffff',
+  colorTextAdd1: ' #bababaff',
+  colorTextAdd2: ' #000000ff',
+  colorTextAdd3: ' #009253ff',
+  colorAdd1: ' #131313ff',
+  colorAdd2: ' #9e9e9eff',
+  colorAdd3: ' #00ff8fff',
 };
 
 //<<----- CALMA THEME ----->>
