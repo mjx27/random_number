@@ -1,5 +1,3 @@
-import type { CSSProperties } from 'react';
-
 export type TGap = '5px' | '10px' | '20px' | '40px';
 export type TPadding = '5px' | '10px' | '20px' | '30px' | '40px';
 export type TTransition =
@@ -9,13 +7,46 @@ export type TTransition =
   | 'all .3s linear';
 export type TBorderRadius = '5px' | '8px' | '10px' | '16px' | '20px' | '32px';
 
+export type TDisplay =
+  | 'block'
+  | 'inline'
+  | 'inline-block'
+  | 'flex'
+  | 'grid'
+  | 'none';
+
+export type TFlexDirection =
+  | 'row'
+  | 'row-reverse'
+  | 'column'
+  | 'column-reverse';
+
+export type TPlaceItems =
+  | 'normal'
+  | 'stretch'
+  | 'center'
+  | 'start'
+  | 'flex-start'
+  | 'flex-end';
+
+export type TPlaceContent =
+  | 'normal'
+  | 'stretch'
+  | 'center'
+  | 'start'
+  | 'flex-start'
+  | 'flex-end'
+  | 'space-between'
+  | 'space-around'
+  | 'space-evenly';
+
 export type TLayoutProps = Partial<{
-  display: CSSProperties['display'];
-  flexDirection: CSSProperties['flexDirection'];
-  alignItems: CSSProperties['alignItems'];
-  justifyItems: CSSProperties['justifyItems'];
-  alignContent: CSSProperties['alignContent'];
-  justifyContent: CSSProperties['justifyContent'];
+  display: TDisplay;
+  flexDirection: TFlexDirection;
+  alignItems: TPlaceItems;
+  justifyItems: TPlaceItems;
+  alignContent: TPlaceContent;
+  justifyContent: TPlaceContent;
   gap: TGap;
   gridTemplate: string;
   padding: TPadding;
