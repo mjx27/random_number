@@ -1,8 +1,10 @@
-import type { JSX } from 'react';
+import { useState, type JSX } from 'react';
 
+import type { TPickTypeNames , CPickTypeNames , PickType } from '@/features/PickType';
 import { Layout } from '@/shared/ui/Layout';
 
 export const MainPage = (): JSX.Element => {
+  const { 0: type, 1: setType } = useState<TPickTypeNames>(CPickTypeNames.MATH);
   return (
     <Layout
       as={'main'}
@@ -10,6 +12,8 @@ export const MainPage = (): JSX.Element => {
       flexDirection="column"
       gap="20px"
       alignItems="center"
-    ></Layout>
+    >
+      <PickType type={type} setType={setType} />
+    </Layout>
   );
 };
