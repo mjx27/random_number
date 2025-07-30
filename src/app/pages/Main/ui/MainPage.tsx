@@ -24,13 +24,13 @@ export const MainPage = (): JSX.Element => {
       gap="20px"
       alignItems="center"
     >
-      <PickType type={type} setType={setType} />
       <PickNumber
         {...error}
         setError={setError}
         pickedNumber={pickedNumber}
         setPickedNumber={setPickedNumber}
       />
+      <PickType type={type} setType={setType} />
     </Layout>
   );
 };
