@@ -55,6 +55,12 @@ const dynamicGlobalStyles = (theme: ITheme) => css`
     border: none;
     background-color: transparent;
     cursor: text;
+    transition: all 0.2s linear;
+  }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    appearance: none;
   }
 
   h1 {
@@ -75,7 +81,7 @@ const dynamicGlobalStyles = (theme: ITheme) => css`
 
   p {
     font-size: 1rem;
-    color: ${theme.colorMain};
+    color: ${theme.colorAdd2};
   }
 
   time {
