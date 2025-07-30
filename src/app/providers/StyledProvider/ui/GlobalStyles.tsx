@@ -52,16 +52,15 @@ const dynamicGlobalStyles = (theme: ITheme) => css`
 
   input {
     outline: none;
-    margin: 0;
     border: none;
     background-color: transparent;
     cursor: text;
+    transition: all 0.2s linear;
   }
 
   input[type='number']::-webkit-outer-spin-button,
   input[type='number']::-webkit-inner-spin-button {
     appearance: none;
-    margin: 0;
   }
 
   h1 {

@@ -4,7 +4,11 @@ import type { IErrorProps } from '@/shared/models/interfaces/IError';
 import { InputRequired } from '@/shared/ui/Input';
 import { Layout } from '@/shared/ui/Layout';
 
-import { CPickNumberAdvice, CPickNumberName } from '../lib/constants';
+import {
+  CPickNumberAdvice,
+  CPickNumberLength,
+  CPickNumberName,
+} from '../lib/constants';
 import { InputSizeHelper } from '../lib/utils/InputSizeHelper';
 
 interface IProps extends IErrorProps {
@@ -18,12 +22,12 @@ export const PickNumber = ({
   ...errorProps
 }: IProps): JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const val = e.target.value;
-    e.target.style.fontSize = InputSizeHelper.getFontSize(val);
-    e.target.style.width = InputSizeHelper.getWidth(val);
-    setPickedNumber(val === '' ? null : val.slice(-5));
+    const inputElement = e.target;
+    const val = inputElement.value.slice(0, CPickNumberLength);
+    inputElement.style.fontSize = InputSizeHelper.getFontSize(val.length);
+    inputElement.style.width = InputSizeHelper.getWidth(val.length);
+    setPickedNumber(val === '' ? null : val.slice(Number(val)));
   };
-
   return (
     <Layout
       display="flex"
