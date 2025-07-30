@@ -1,13 +1,12 @@
 import { useState, type JSX } from 'react';
 
+import { PickNumber } from '@/features/PickNumber';
 import {
   type TPickTypeNames,
   CPickTypeNames,
   PickType,
 } from '@/features/PickType';
-import { PickNumber } from '@/features/PickNumber';
 import type { IError } from '@/shared/models/interfaces/IError';
-import { Layout } from '@/shared/ui/Layout';
 import { Layout } from '@/shared/ui/Layout';
 
 export const MainPage = (): JSX.Element => {
