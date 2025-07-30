@@ -1,6 +1,10 @@
 import { useState, type JSX } from 'react';
 
-import type { TPickTypeNames , CPickTypeNames , PickType } from '@/features/PickType';
+import {
+  type TPickTypeNames,
+  CPickTypeNames,
+  PickType,
+} from '@/features/PickType';
 import { Layout } from '@/shared/ui/Layout';
 
 export const MainPage = (): JSX.Element => {
