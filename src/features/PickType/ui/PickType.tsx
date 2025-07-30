@@ -18,11 +18,8 @@ export const PickType = ({ type, setType }: IProps): JSX.Element => {
       {CPickTypesArray.map((pickType) => (
         <Button
           onClick={handleClick(pickType)}
-          styleType={
-            type === pickType
-              ? CButtonStylesNames.ACTIVE
-              : CButtonStylesNames.LIGHT
-          }
+          styleType={CButtonStylesNames.LIGHT}
+          isActive={type === pickType}
         >
           {pickType}
         </Button>

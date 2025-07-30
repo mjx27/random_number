@@ -23,10 +23,10 @@ export const PickNumber = ({
 }: IProps): JSX.Element => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputElement = e.target;
-    const val = inputElement.value.slice(0, CPickNumberLength);
+    const val = inputElement.value.slice(-CPickNumberLength);
     inputElement.style.fontSize = InputSizeHelper.getFontSize(val.length);
     inputElement.style.width = InputSizeHelper.getWidth(val.length);
-    setPickedNumber(val === '' ? null : val.slice(Number(val)));
+    setPickedNumber(val === '' ? null : val);
   };
   return (
     <Layout
