@@ -9,7 +9,7 @@ import { CRoutes } from './routes';
 export const App = (): JSX.Element => {
   return (
     <AppProvider>
-      <Router>
+      <Router basename="/">
         <Header />
         <Routes>
           {CRoutes.map(({ path, element }) => (

@@ -12,6 +12,7 @@ export const commonConfig = {
   output: {
     path: path.resolve(__dirname, '../../dist'),
     filename: isProduction ? '[name].[contenthash:8].js' : '[name].js',
+    publicPath: '/',
     chunkFilename: isProduction
       ? '[name].[contenthash:8].chunk.js'
       : '[name].chunk.js',
