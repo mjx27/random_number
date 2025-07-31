@@ -1,8 +1,10 @@
 import type { Dispatch } from 'react';
 
+import type { TInputAttributeType } from './types';
+
 export interface IInput {
   setValue: Dispatch<number | string>;
   value: number | string;
-  type: 'number' | 'text';
+  type: TInputAttributeType;
   name: string;
 }

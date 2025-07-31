@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { NumberService } from '@/entities/Fact/lib/utils/NumberService';
+import { NumberService } from '@/entities/Fact';
 import { CRoutesPaths } from '@/shared/constants/CRoutes';
 import { CButtonDefaultStylesNames } from '@/shared/ui/Button/lib/constants/CButtonDefault';
 import { ButtonDefault } from '@/shared/ui/Button/ui/ButtonDefault';

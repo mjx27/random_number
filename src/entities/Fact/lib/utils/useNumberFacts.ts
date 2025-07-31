@@ -6,7 +6,7 @@ import type { TPickTypeNames } from '@/features/PickType';
 import { CRoutesPaths } from '@/shared/constants/CRoutes';
 import type { IError } from '@/shared/models/interfaces/IError';
 
-import { CErrorGetNumberMessages } from '../../../../features/GetResult/lib/constants';
+import { CErrorGetNumberMessages } from '../constants';
 
 import { NumberService } from './NumberService';
 import { NumberValidation } from './NumberValidation';

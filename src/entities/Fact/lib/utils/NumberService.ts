@@ -2,9 +2,8 @@ import axios from 'axios';
 
 import type { TPickTypeNames } from '@/features/PickType';
 
-import { CAPI_NUMBER } from '../../../../features/GetResult/lib/constants';
 import { type IFact } from '../../model/interfaces';
-import { CNumberFactKey } from '../constants';
+import { CAPI_NUMBER, CNumberFactKey } from '../constants';
 
 export class NumberService {
   public static async fetchRandomFact(type: TPickTypeNames): Promise<string> {
