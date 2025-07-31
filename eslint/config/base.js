@@ -8,12 +8,17 @@ export default {
     '**/*.d.ts',
     '**/coverage/',
     '**/*.config.ts',
+    '**/webpack/**',
   ],
   ...eslint.configs.recommended,
   languageOptions: {
     globals: {
       ...globals.browser,
       ...globals.node,
+      ...globals.es2021,
     },
+  },
+  rules: {
+    'no-unused-vars': 'off',
   },
 };

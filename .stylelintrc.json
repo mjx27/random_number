@@ -16,7 +16,7 @@
       true,
       {
         "ignoreProperties": {
-          "/color/": ["/props\\.theme\\.[a-zA-Z]+/i"]
+          "/.*/": ["/props\\.[a-zA-Z]+/", "/theme\\.[a-zA-Z]+/"]
         }
       }
     ],

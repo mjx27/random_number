@@ -25,11 +25,11 @@ export default {
         ],
         pathGroups: [
           { pattern: '@/**', group: 'internal' },
-          { pattern: '@entities/**', group: 'internal' },
-          { pattern: '@features/**', group: 'internal' },
-          { pattern: '@widgets/**', group: 'internal' },
-          { pattern: '@shared/**', group: 'internal' },
-          { pattern: '@models/**', group: 'internal' },
+          { pattern: '@/entities/**', group: 'internal' },
+          { pattern: '@/features/**', group: 'internal' },
+          { pattern: '@/widgets/**', group: 'internal' },
+          { pattern: '@/shared/**', group: 'internal' },
+          { pattern: '@/models/**', group: 'internal' },
         ],
         'newlines-between': 'always',
         alphabetize: { order: 'asc', caseInsensitive: true },
@@ -39,7 +39,13 @@ export default {
     'import/extensions': [
       'error',
       'ignorePackages',
-      { ts: 'never', tsx: 'never' },
+      {
+        js: 'off',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
     ],
+    'import/no-duplicates': 'error',
   },
 };
