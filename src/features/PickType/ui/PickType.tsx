@@ -1,6 +1,6 @@
 import type { Dispatch, JSX } from 'react';
 
-import { Button, CButtonStylesNames } from '@/shared/ui/Button';
+import { ButtonPick, CButtonPickStylesNames } from '@/shared/ui/Button';
 import { Layout } from '@/shared/ui/Layout';
 
 import { CPickTypesArray } from '../lib/constants';
@@ -16,13 +16,14 @@ export const PickType = ({ type, setType }: IProps): JSX.Element => {
   return (
     <Layout display="flex" gap="20px">
       {CPickTypesArray.map((pickType) => (
-        <Button
+        <ButtonPick
           onClick={handleClick(pickType)}
-          styleType={CButtonStylesNames.LIGHT}
+          styleType={CButtonPickStylesNames.LIGHT}
           isActive={type === pickType}
+          key={pickType}
         >
           {pickType}
-        </Button>
+        </ButtonPick>
       ))}
     </Layout>
   );

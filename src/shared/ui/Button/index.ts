@@ -1,4 +1,4 @@
-import { CButtonStylesNames } from './lib/constants/index';
-import { Button } from './ui/Button';
+import { CButtonPickStylesNames } from './lib/constants/CButtonPick';
+import { ButtonPick } from './ui/ButtonPick';
 
-export { Button, CButtonStylesNames };
+export { ButtonPick, CButtonPickStylesNames };

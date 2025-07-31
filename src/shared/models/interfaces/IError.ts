@@ -1,7 +1,7 @@
 import type { Dispatch } from 'react';
 
 export interface IError {
-  errorMessage: string;
+  errorMessage?: string;
   isError: boolean;
 }
 

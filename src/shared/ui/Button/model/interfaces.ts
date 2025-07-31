@@ -1,11 +1,16 @@
 import type { ButtonHTMLAttributes } from 'react';
 
-import type { TButtonStyles } from './types';
-export interface IStyledButton {
+import type { TButtonPickStyles, TButtonDeafultStyles } from './types';
+export interface IStyledButtonPick {
   isActive: boolean;
 }
-export interface IButton
+export interface IButtonPick
   extends ButtonHTMLAttributes<HTMLButtonElement>,
-    IStyledButton {
-  styleType: TButtonStyles;
+    IStyledButtonPick {
+  styleType: TButtonPickStyles;
+}
+
+export interface IButtonDefault
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  styleType: TButtonDeafultStyles;
 }

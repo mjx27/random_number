@@ -1,5 +1,6 @@
 import { useState, type JSX } from 'react';
 
+import { GetResult } from '@/features/GetResult';
 import { PickNumber } from '@/features/PickNumber';
 import {
   type TPickTypeNames,
@@ -31,6 +32,7 @@ export const MainPage = (): JSX.Element => {
         setPickedNumber={setPickedNumber}
       />
       <PickType type={type} setType={setType} />
+      <GetResult setError={setError} pickedNumber={pickedNumber} type={type} />
     </Layout>
   );
 };
