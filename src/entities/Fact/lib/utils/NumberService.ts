@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-import type { IFact } from '@/entities/Fact';
 import type { TPickTypeNames } from '@/features/PickType';
 
-import { CAPI_NUMBER, CNumberFactKey } from '../constants';
+import { CAPI_NUMBER } from '../../../../features/GetResult/lib/constants';
+import { type IFact } from '../../model/interfaces';
+import { CNumberFactKey } from '../constants';
 
 export class NumberService {
   public static async fetchRandomFact(type: TPickTypeNames): Promise<string> {
@@ -25,5 +26,10 @@ export class NumberService {
 
   public static saveFactToStorage(fact: IFact): void {
     localStorage.setItem(CNumberFactKey, JSON.stringify(fact));
+  }
+
+  public static getFactFromStorage(): IFact {
+    const fact: IFact = JSON.parse(localStorage.getItem(CNumberFactKey) ?? '');
+    return fact;
   }
 }

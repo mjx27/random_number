@@ -1,12 +1,11 @@
 import type { Dispatch, JSX } from 'react';
 
+import { useNumberFacts } from '@/entities/Fact';
 import type { TPickTypeNames } from '@/features/PickType';
 import type { IError } from '@/shared/models/interfaces/IError';
 import { CButtonDefaultStylesNames } from '@/shared/ui/Button/lib/constants/CButtonDefault';
 import { ButtonDefault } from '@/shared/ui/Button/ui/ButtonDefault';
 import { Layout } from '@/shared/ui/Layout';
-
-import { useNumberFacts } from '../lib/utils/useNumberFacts';
 
 
 interface IProps {

@@ -1,4 +1,4 @@
-import type { Dispatch} from 'react';
+import type { Dispatch } from 'react';
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,12 +6,10 @@ import type { TPickTypeNames } from '@/features/PickType';
 import { CRoutesPaths } from '@/shared/constants/CRoutes';
 import type { IError } from '@/shared/models/interfaces/IError';
 
-import { CErrorGetNumberMessages } from '../constants';
+import { CErrorGetNumberMessages } from '../../../../features/GetResult/lib/constants';
 
 import { NumberService } from './NumberService';
 import { NumberValidation } from './NumberValidation';
-
-
 
 export const useNumberFacts = (setError: Dispatch<IError>) => {
   const navigate = useNavigate();

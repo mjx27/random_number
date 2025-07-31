@@ -6,5 +6,3 @@ export const CErrorGetNumberMessages = {
   WRONG_FORMAT: 'Enter a positive number',
   NOT_FETCHED: 'Failed to fetch random fact',
 } as const;
-
-export const CNumberFactKey = 'lastInfo';

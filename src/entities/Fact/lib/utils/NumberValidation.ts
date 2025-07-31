@@ -1,6 +1,6 @@
 import type { IError } from '@/shared/models/interfaces/IError';
 
-import { CErrorGetNumberMessages } from '../constants';
+import { CErrorGetNumberMessages } from '../../../../features/GetResult/lib/constants';
 
 export class NumberValidation {
   public static validateInputNumber(number: string | null): IError {

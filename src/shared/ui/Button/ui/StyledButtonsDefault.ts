@@ -10,6 +10,7 @@ export const StyledButtonDefault = styled.button(
 
     '&:hover': {
       color: theme.colorMain,
+      backgroundColor: theme.colorAdd3,
     },
   })
 );
