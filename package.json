@@ -1,14 +1,13 @@
 {
-  "name": "devsols",
-  "version": "1.0.0",
+  "name": "random-number",
+  "version": "1.0.1",
   "description": "",
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack/webpack.prod.js",
-    "build:analyze": "set ANALYZE=true&& webpack --config webpack/webpack.analyze.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.prod.js",
+    "build:analyze": "cross-env ANALYZE=true webpack --config webpack/webpack.analyze.js",
     "start": "webpack serve --config webpack/webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint . src/ --fix=true",

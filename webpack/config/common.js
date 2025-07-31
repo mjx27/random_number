@@ -6,15 +6,14 @@ const __dirname = path.dirname(__filename);
 
 export const isProduction = process.env.NODE_ENV === 'production';
 export const isAnalyze = process.env.ANALYZE === 'true';
-
 export const commonConfig = {
   entry: path.resolve(__dirname, '../../src/app/index.tsx'),
   output: {
     path: path.resolve(__dirname, '../../dist'),
-    filename: isProduction ? '[name].[contenthash:8].js' : '[name].js',
+    filename: isProduction ? '[name].[contenthash:8].mjs' : '[name].js',
     publicPath: '/',
     chunkFilename: isProduction
-      ? '[name].[contenthash:8].chunk.js'
+      ? '[name].[contenthash:8].chunk.mjs'
       : '[name].chunk.js',
     publicPath: '/',
     clean: true,
