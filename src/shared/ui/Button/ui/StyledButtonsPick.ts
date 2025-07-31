@@ -3,17 +3,15 @@ import styled from '@emotion/styled';
 
 import type { ITheme } from '@/app/providers/StyledProvider/models/interfaces';
 
+import { createButtonStyle } from '../lib/utils/createButtonStyle';
+
 interface IProps {
   isActive: boolean;
 }
 
-const buttonStyle = (theme: ITheme, { isActive }: IProps) => css`
-  padding: ${theme.paddings.paddingLittle1} ${theme.paddings.paddingLittle2};
-  letter-spacing: 1px;
-  border-radius: ${theme.borderRadiuses.borderRadiusMedium};
-  border: 2px solid;
-  transition: ${theme.transitions.transitionDefaultFast};
+const buttonPickStyle = (theme: ITheme, { isActive }: IProps) => css`
   ${isActive ? activeStyles(theme) : unActiveStyles(theme)}
+  ${createButtonStyle(theme)}
 `;
 
 const activeStyles = (theme: ITheme) => css`
@@ -33,7 +31,7 @@ export const StyledButtonDark = styled.button<IProps>(
     color: `${props.theme.colorTextAdd1}`,
     borderColor: `${props.theme.colorAdd1}`,
   }),
-  (props) => buttonStyle(props.theme, { isActive: props.isActive })
+  (props) => buttonPickStyle(props.theme, { isActive: props.isActive })
 );
 
 export const StyledButtonLight = styled.button<IProps>(
@@ -41,5 +39,5 @@ export const StyledButtonLight = styled.button<IProps>(
     color: `${props.theme.colorTextAdd2}`,
     borderColor: `${props.theme.colorAdd2}`,
   }),
-  (props) => buttonStyle(props.theme, { isActive: props.isActive })
+  (props) => buttonPickStyle(props.theme, { isActive: props.isActive })
 );
